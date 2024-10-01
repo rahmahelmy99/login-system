@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- & google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- & fontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- & bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- & main style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div
+      class="register-page vh-100 d-flex justify-content-around align-items-center"
+      id="register-page"
+    >
+      <form
+        class="register-form form-control shadow me-0 my-2 p-5 text-center bg-transparent border-0"
+      >
+        <h1 class="text-center">Smart Login System</h1>
+        <input
+          class="w-100 mt-4 mb-1 form-control"
+          type="text"
+          name="username"
+          id="regsName"
+          required
+          placeholder="Enter your name"
+        />
+        <p class="nameError ps-3 text-danger text-start mb-3 d-none">
+          * Name should be consist of characters and spaces only
+        </p>
+        <input
+          class="w-100 mt-2 mb-1 form-control"
+          type="email"
+          name="email"
+          id="regsEmail"
+          placeholder="Enter your email"
+          required
+        />
+        <p class="emailError ps-3 text-danger text-start mb-3 d-none">
+          * ex: example123@gmail.com
+        </p>
+        <input
+          class="w-100 mt-2 mb-1 form-control"
+          type="password"
+          name="password"
+          id="regsPass"
+          required
+          placeholder="Enter your password"
+        />
+        <p class="passError ps-3 text-danger text-start mb-3 d-none">
+          * password should be consist of characters and numbers only
+        </p>
+        <p class="error text-danger m-2 p-0 d-none">All inputs is required</p>
+        <p class="success text-success m-2 p-0 d-none">Success</p>
+        <p class="existEmail text-danger m-2 p-0 d-none">
+          this Email already exists
+        </p>
+        <button
+          class="btn btn-success w-100 mt-4 mb-3 bg-transparent"
+          type="button"
+          id="registerBtn"
+        >
+          Sign Up
+        </button>
+
+        <p>
+          You have an account?
+          <a class="signIn text-decoration-none" href="#">Signin</a>
+        </p>
+      </form>
+    </div>
+
+    <div
+      class="login-page vh-100 d-none justify-content-around align-items-center"
+      id="login-page"
+    >
+      <form
+        class="login-form form-control shadow me-0 my-2 p-5 text-center bg-transparent border-0"
+      >
+        <h1 class="text-center">Smart Login System</h1>
+        <input
+          class="w-100 mt-2 mb-1 form-control"
+          type="email"
+          name="email"
+          id="logEmail"
+          required
+          placeholder="Enter your email"
+        />
+        <p class="emailError ps-3 text-danger text-start mb-3 d-none">
+          * ex: example123@gmail.com
+        </p>
+        <input
+          class="w-100 mt-2 mb-1 form-control"
+          type="password"
+          name="password"
+          id="logPass"
+          required
+          placeholder="Enter your password"
+        />
+        <p class="passError ps-3 text-danger text-start mb-3 d-none">
+          * password should be consist of characters and numbers only
+        </p>
+        <p class="loginError text-danger m-2 p-0 d-none">
+          incorrect email or password
+        </p>
+
+        <button
+          class="btn btn-success w-100 mt-4 mb-3 bg-transparent"
+          type="button"
+          id="logBtn"
+        >
+          Login
+        </button>
+        <p>
+          Don’t have an account?
+          <a class="signUp text-decoration-none" href="#">Sign Up</a>
+        </p>
+      </form>
+    </div>
+
+    <div
+      class="welcome-page vh-100 w-100 d-none justify-content-between align-items-center"
+    >
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary fixed-top px-5 shadow"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand fs-4 fw-bold" href="#">SMART LOGIN </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button class="logoutBtn btn bg-transparent">LogOut</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="card m-auto d-flex flex-row bg-transparent shadow border-0 justify-content-center align-items-center"
+        style="width: 50rem; height: 30rem"
+      >
+        <div class="card-body">
+          <h5 class="card-title text-center display-3">
+            Welcome, <span class="userName text-dark fs-1 fw-bold">Rahma</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
